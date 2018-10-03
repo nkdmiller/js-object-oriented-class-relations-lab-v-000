@@ -55,3 +55,30 @@ class Passenger {
         );      
     }
 }
+
+class Trip {
+    constructor(name) {
+        this.id = ++tripId;
+        this.name = name;
+        // if (user) {
+        //     this.userId = user.id;
+        // }
+ 
+        // insert in the item to the store
+        store.trips.push(this);
+    }
+    trips() {
+        return store.trips.filter(
+            function(trip) {
+                return trip.passengerId === this.id;
+            }.bind(this)
+        );
+    }
+    drivers() {
+        return store.trips.filter(
+            function(trip) {
+                return item.userId === this.id;
+            }.bind(this)
+        );      
+    }
+}
