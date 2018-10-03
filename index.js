@@ -14,14 +14,14 @@ class Driver {
         store.drivers.push(this);
     }
     trips() {
-        return store.trips.find(
+        return store.trips.filter(
             function(trip) {
                 return trip.driverId === this.id;
             }.bind(this)
         );
     }
     passengers() {
-        return store.trips.filter(
+        return store.trips.find(
             function(trip) {
                 if (trip.driverId === this.id){
                   return trip.passenger();
