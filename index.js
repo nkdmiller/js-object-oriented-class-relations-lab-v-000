@@ -57,7 +57,7 @@ class Passenger {
                   return dMatch;
                 }
             }.bind(this)
-        );      
+        )[0];      
     }
 }
 
