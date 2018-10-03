@@ -57,12 +57,16 @@ class Passenger {
 }
 
 class Trip {
-    constructor(name) {
+    constructor(name, driver, passenger) {
         this.id = ++tripId;
         this.name = name;
-        // if (user) {
-        //     this.userId = user.id;
-        // }
+        if (driver) {
+            this.driverId = driver.id;
+         }
+         
+         if (passenger) {
+           this.passengerId = passenger.id;
+         }
  
         // insert in the item to the store
         store.trips.push(this);
