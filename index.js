@@ -54,6 +54,7 @@ class Passenger {
             function(trip) {
                 if (trip.passengerId === this.id){
                   return trip.driver();
+                  console.log(trip.driver())
                 }
             }.bind(this)
         );      
