@@ -1,8 +1,10 @@
 let store = { drivers: [], trips: [], passengers: [] };
-let itemId = 0;
+let driverId = 0;
+let passengerId = 0;
+let tripId = 0;
 class Driver {
     constructor(name) {
-        this.id = ++itemId;
+        this.id = ++driverId;
         this.name = name;
         // if (user) {
         //     this.userId = user.id;
@@ -29,23 +31,23 @@ class Driver {
 
 class Passenger {
     constructor(name) {
-        this.id = ++itemId;
+        this.id = ++passengerId;
         this.name = name;
         // if (user) {
         //     this.userId = user.id;
         // }
  
         // insert in the item to the store
-        store.drivers.push(this);
+        store.passengers.push(this);
     }
     trips() {
         return store.trips.filter(
             function(trip) {
-                return trip.driverId === this.id;
+                return trip.passengerId === this.id;
             }.bind(this)
         );
     }
-    passengers() {
+    drivers() {
         return store.trips.filter(
             function(trip) {
                 return item.userId === this.id;
