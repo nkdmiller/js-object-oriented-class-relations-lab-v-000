@@ -71,7 +71,7 @@ class Trip {
         // insert in the item to the store
         store.trips.push(this);
     }
-    trips() {
+    drivers() {
         return store.trips.filter(
             function(trip) {
                 return trip.passengerId === this.id;
