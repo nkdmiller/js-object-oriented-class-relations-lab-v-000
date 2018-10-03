@@ -1,4 +1,4 @@
-let store = [];
+let store = { drivers: [], trips: [], passengers: [] };
 let itemId = 0;
 class Driver {
     constructor(name) {
