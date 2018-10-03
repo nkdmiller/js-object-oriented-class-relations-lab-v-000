@@ -18,4 +18,7 @@ class Driver {
             }.bind(this)
         );
     }
+    passengers() {
+      
+    }
 }
