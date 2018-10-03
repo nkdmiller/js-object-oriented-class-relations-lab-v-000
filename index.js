@@ -70,14 +70,14 @@ class Trip {
         // insert in the item to the store
         store.trips.push(this);
     }
-    drivers() {
+    driver() {
         return store.drivers.filter(
             function(driver) {
                 return driver.id === this.driverId;
             }.bind(this)
         );
     }
-    passengers() {
+    passenger() {
         return store.passengers.filter(
             function(passenger) {
                 return passenger.id === this.passengerId;
