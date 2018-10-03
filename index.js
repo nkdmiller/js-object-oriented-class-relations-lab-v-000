@@ -23,7 +23,9 @@ class Driver {
     passengers() {
         return store.trips.filter(
             function(trip) {
-                return item.userId === this.id;
+                if (item.userId === this.id){
+                  return item.passenger();
+                }
             }.bind(this)
         );      
     }
