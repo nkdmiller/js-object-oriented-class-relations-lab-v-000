@@ -1,3 +1,4 @@
+let store = [];
 let itemId = 0;
 class Driver {
     constructor(name) {
@@ -8,9 +9,13 @@ class Driver {
         // }
  
         // insert in the item to the store
-        store.items.push(this);
+        store.drivers.push(this);
     }
-    setUser(user) {
-        this.userId = user.id;
+    trips() {
+        return store.trips.filter(
+            function(item) {
+                return item.userId === this.id;
+            }.bind(this)
+        );
     }
 }
