@@ -73,16 +73,16 @@ class Trip {
     }
     drivers() {
         return store.drivers.filter(
-            function(trip) {
+            function(driver) {
                 return driver.id === this.driverId;
             }.bind(this)
         );
     }
     passengers() {
-        return store.trips.filter(
-            function(trip) {
-                return item.userId === this.id;
+        return store.passengers.filter(
+            function(passenger) {
+                return passenger.id === this.passengerId;
             }.bind(this)
-        );      
+        );
     }
 }
