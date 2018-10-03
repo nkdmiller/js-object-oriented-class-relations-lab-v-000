@@ -53,11 +53,10 @@ class Passenger {
         return store.trips.filter(
             function(trip) {
                 if (trip.passengerId === this.id){
-                  let dMatch = trip.driver();
-                  return dMatch;
+                  return trip.driver();
                 }
             }.bind(this)
-        )[0].driverId;      
+        );      
     }
 }
 
