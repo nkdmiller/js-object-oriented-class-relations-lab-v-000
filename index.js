@@ -13,14 +13,14 @@ class Driver {
     }
     trips() {
         return store.trips.filter(
-            function(item) {
-                return item.userId === this.id;
+            function(trip) {
+                return trip.driverId === this.id;
             }.bind(this)
         );
     }
     passengers() {
-        return store.passengers.filter(
-            function(item) {
+        return store.trips.filter(
+            function(trip) {
                 return item.userId === this.id;
             }.bind(this)
         );      
