@@ -72,13 +72,13 @@ class Trip {
         store.trips.push(this);
     }
     drivers() {
-        return store.trips.filter(
+        return store.drivers.filter(
             function(trip) {
-                return trip.passengerId === this.id;
+                return driver.id === this.driverId;
             }.bind(this)
         );
     }
-    drivers() {
+    passengers() {
         return store.trips.filter(
             function(trip) {
                 return item.userId === this.id;
