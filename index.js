@@ -55,7 +55,7 @@ class Passenger {
                 if (trip.passengerId === this.id){
                   return trip.driver();
                 }
-            }.passenger().bind(this)
+            }.bind(this)
         );      
     }
 }
