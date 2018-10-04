@@ -61,7 +61,6 @@ class Passenger {
         }.bind(this)
       );
     }
-  }
 }
 
 class Trip {
