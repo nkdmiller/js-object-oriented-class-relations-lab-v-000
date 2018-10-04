@@ -49,15 +49,19 @@ class Passenger {
             }.bind(this)
         );
     }
-    drivers() {
-      return store.trips.filter(
+
+     drivers() {
+      return store.drivers.filter(
+        function(driver) {
+          return driver.trips().filter(
             function(trip) {
-                if (trip.passengerId === this.id){
-                  return trip.driver();
-                }
+              trip.passengerId === this.id;
             }.bind(this)
-        );      
+          );
+        }.bind(this)
+      );
     }
+  }
 }
 
 class Trip {
