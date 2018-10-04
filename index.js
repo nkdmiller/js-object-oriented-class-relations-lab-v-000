@@ -20,14 +20,16 @@ class Driver {
             }.bind(this)
         );
     }
-    passengers() {
-        return store.trips.filter(
+     passengers() {
+      return store.passengers.filter(
+        function(passenger) {
+          return passenger.trips().filter(
             function(trip) {
-                if (trip.driverId === this.id){
-                  return trip.passenger();
-                }
+              trip.driverId === this.id;
             }.bind(this)
-        );      
+          );
+        }.bind(this)
+      );
     }
 }
 
